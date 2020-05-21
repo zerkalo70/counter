@@ -1,68 +1,94 @@
+body {
+    background-color: aquamarine;
+}
+
 .app {
     display: grid;
-    grid-template-columns: 500px;
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    margin-top: 100px;
+    /*border: 2px solid red;*/
+}
+
+.title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    justify-self: center;
+    color: mediumslateblue;
+    font-size: 50px;
+}
+
+.counter {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+    grid-template-rows: 1fr 50px 50px 1fr;
     row-gap: 10px;
-    width: 500px;
-    margin: 50px 400px;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    width: 450px;
     text-align: center;
-    background-color: palevioletred;
-    /*align-items: center;*/
-    /*justify-content: center;*/
     color: green;
-    border: 2px solid palevioletred;
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: deepskyblue;
 }
 
 .time {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    font-size: 30px;
-    background-color: sandybrown;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 35px;
+    font-weight: bold;
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: skyblue;
 }
 
 .row {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    background-color: cyan;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border: 2px solid blue;
+    border-radius: 15px;
 }
 
 .row :nth-child(1) {
-    width: 100px;
-    margin: 10px;
+    width: 150px;
+    margin: 10px 10px 0 auto;
+    border: 2px solid yellow;
+    border-radius: 15px;
 }
 
 .row :nth-child(2) {
-    width: 100px;
-    margin: 10px
+    width: 150px;
+    margin: 10px auto 0 10px;
+    border: 2px solid yellow;
+    border-radius: 15px;
+    background-color: hotpink;
 }
 
 .button {
-    /*padding: .6rem 1.5rem;*/
-    /*margin: 10px;*/
-    /*border-radius: 3px;*/
-    /*text-transform: uppercase;*/
     font-weight: bold;
     font-size: 20px;
-    /*border-style: groove;*/
 }
 
 .button:focus {
     outline-width: 0;
 }
 
-.button-primary:hover {
+.universalButton:hover {
     background-color: #2641d4;
     border: 1px solid #1b1f2b;
 }
 
-.button-primary-active {
+.universalButton-active {
     background-color: #3151ff;
     border: 1px solid #152684;
     color: white;
 }
 
-.button-primary-inactive {
+.universalButton-inactive {
     background-color: #3151ff;
     border: 1px solid #152684;
     color: white;
 }
+
