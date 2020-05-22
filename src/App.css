@@ -28,7 +28,6 @@ body {
     justify-self: center;
     width: 450px;
     text-align: center;
-    color: green;
     border: 2px solid blue;
     border-radius: 15px;
     background-color: deepskyblue;
@@ -42,23 +41,35 @@ body {
     border: 2px solid blue;
     border-radius: 15px;
     background-color: skyblue;
+    color: green;
 }
 
-.row {
+.time-stop {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 35px;
+    font-weight: bold;
+    border: 2px solid blue;
+    border-radius: 15px;
+    background-color: skyblue;
+    color: red;
+}
+
+.blockButton {
     grid-column: 2/3;
     grid-row: 3/4;
     border: 2px solid blue;
     border-radius: 15px;
 }
 
-.row :nth-child(1) {
+.blockButton :nth-child(1) {
     width: 150px;
     margin: 10px 10px 0 auto;
     border: 2px solid yellow;
     border-radius: 15px;
 }
 
-.row :nth-child(2) {
+.blockButton :nth-child(2) {
     width: 150px;
     margin: 10px auto 0 10px;
     border: 2px solid yellow;

@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
+import {Button} from "./Components/Common/Button/button";
 
 
 function App() {
@@ -35,18 +36,15 @@ function App() {
         <div className="app">
             <div className="title">Counter</div>
             <div className="counter">
-            <div className="time">{seconds}</div>
-            <div className="row">
-                <button
-                    className={`button universalButton universalButton-${active ? 'active' : 'inactive'}`}
-                    onClick={toggle}>
-                    {active ? 'Pause' : 'Start'}
-                </button>
-                <button className="button"
-                        onClick={reset}>
-                    Reset
-                </button>
-            </div>
+                <div className={seconds === 5 ? "time-stop" : "time"}>{seconds}</div>
+                <div className="blockButton">
+                    <Button className={`button universalButton universalButton-${active ? 'active' : 'inactive'}`}
+                            callback={toggle}
+                            text={active ? 'Pause' : 'Start'}/>
+                    <Button className="button"
+                            callback={reset}
+                            text="Reset"/>
+                </div>
             </div>
         </div>
     );
